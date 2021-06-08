@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    tools:context=".offline.post_fragment">
+
+    <ImageView
+        android:id="@+id/post_fragment_postimage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/browser_actions_context_menu_max_width"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_fragment_userprofile" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/post_fragment_userprofile"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/outline_person_outline_24"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/post_fragment_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/post_fragment_userprofile"
+        app:layout_constraintStart_toEndOf="@+id/post_fragment_userprofile"
+        app:layout_constraintTop_toTopOf="@+id/post_fragment_userprofile" />
+
+    <TextView
+        android:id="@+id/post_fragment_likebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/outline_favorite_border_24"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_fragment_postimage" />
+
+    <TextView
+        android:id="@+id/post_fragment_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/post_fragment_sharebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_fragment_postimage" />
+
+    <ImageView
+        android:id="@+id/post_fragment_commentbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/outline_comment_24"
+        app:layout_constraintStart_toEndOf="@+id/post_fragment_likebutton"
+        app:layout_constraintTop_toBottomOf="@+id/post_fragment_postimage" />
+
+    <TextView
+        android:id="@+id/post_fragment_captiontext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_fragment_commentbutton" />
+
+    <ImageView
+        android:id="@+id/post_fragment_sharebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/outline_share_24"
+        app:layout_constraintStart_toEndOf="@+id/post_fragment_commentbutton"
+        app:layout_constraintTop_toBottomOf="@+id/post_fragment_postimage" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_fragment_captiontext" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

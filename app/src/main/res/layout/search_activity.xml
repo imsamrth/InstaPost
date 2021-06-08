@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search_activity"
+    android:transitionName="side">
+
+
+    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+        android:id="@+id/single_post_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="bottom"
+        app:itemIconSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <ImageButton
+            android:id="@+id/querytype_button_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:tooltipText="fsdfsadf"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/outline_image_search_24"
+            tools:layout_conversion_absoluteHeight="43dp"
+            tools:layout_editor_absoluteY="77dp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_conversion_absoluteWidth="48dp" />
+        <ImageButton
+
+            android:id="@+id/querytype_button_tag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/outline_tag_24"
+            tools:layout_conversion_absoluteHeight="43dp"
+            tools:layout_editor_absoluteY="77dp"
+            tools:layout_editor_absoluteX="127dp"
+            tools:layout_conversion_absoluteWidth="48dp" />
+
+        <ImageButton
+            android:id="@+id/sort_result_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+
+            app:srcCompat="@drawable/outline_sort_24" />
+
+        <ImageButton
+
+            android:layout_weight="1"
+            android:id="@+id/querytype_button_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/outline_person_search_24"
+            tools:layout_conversion_absoluteHeight="43dp"
+            tools:layout_editor_absoluteY="77dp"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_conversion_absoluteWidth="48dp" />
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchactivity_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/searchactivity_query"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Username / Tag"
+                android:inputType="textPersonName"
+                android:paddingRight="8dp"/>
+
+            <ImageButton
+                android:id="@+id/searchactivity_sarchbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/outline_search_24" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/searchactivity_toolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:title="Search"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <WebView
+        android:id="@+id/search_activity_webview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/searchactivity_recyclerview"
+        app:layout_constraintStart_toStartOf="@+id/searchactivity_recyclerview"
+        app:layout_constraintTop_toTopOf="@+id/searchactivity_recyclerview" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchactivity_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <FrameLayout
+        android:id="@+id/commentholder"
+        android:layout_width="match_parent"
+        android:layout_height="393dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

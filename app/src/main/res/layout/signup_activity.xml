@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+   <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                tools:context=".signup_activity">
+
+
+
+
+            <TextView
+                    android:id="@+id/signupactivity_signuptext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome New User"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+                <EditText
+                    android:id="@+id/signupactivity_PersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="4dp"
+                    android:ems="10"
+                    android:hint="name"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/signup_addimage"
+                    app:layout_constraintTop_toBottomOf="@+id/signupactivity_signuptext" />
+
+                <EditText
+                    android:id="@+id/signupactivity_EmailAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="4dp"
+                    android:ems="10"
+                    android:hint="email"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/signup_addimage"
+                    app:layout_constraintTop_toBottomOf="@+id/signupactivity_PersonName" />
+
+                <EditText
+                    android:id="@+id/signupactivity_typephone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="4dp"
+                    android:ems="10"
+                    android:hint="phone"
+                    android:inputType="phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/signupactivity_EmailAddress"
+                    app:layout_constraintTop_toBottomOf="@+id/signupactivity_EmailAddress" />
+
+                <EditText
+                    android:id="@+id/signupactivity_typepassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:ems="10"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signupactivity_typephone" />
+
+                <EditText
+                    android:id="@+id/signupactivity_retypepassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:ems="10"
+                    android:hint="retype password"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signupactivity_typepassword" />
+
+                <Button
+                    android:id="@+id/signupactivity_signup_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:text="signup"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signupactivity_retypepassword" />
+
+                <TextView
+                    android:id="@+id/signupactivity_haveanaccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:text="Already have an account login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signupactivity_signup_button" />
+
+                <TextView
+                    android:id="@+id/imageView8"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:fontFamily="@font/loved_by_the_king"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textSize="48sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/signup_addimage"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/outline_add_a_photo_24"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/signupactivity_typephone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signupactivity_signuptext"
+                    app:layout_constraintVertical_bias="0.818" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </LinearLayout>
